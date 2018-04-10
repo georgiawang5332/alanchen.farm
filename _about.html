@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>關於我假的資量</title>
+</head>
+<style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    p {
+      color: #565656;
+      line-height: 1.8;
+    }
+    .section {
+      min-height: 800px;
+    }
+    .container {
+      width: 1170px;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-left {
+      text-align: left;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .content-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      display: table;
+      min-height: 800px;
+    }
+    .content {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+    }
+    /* End Global Styles */
+
+    /* Start Nav Styles */
+    .navbar {
+      position: fixed;
+      z-index: 999;
+      top: 50%;
+      right: 50px;
+      transform: translateY(-50%);
+    }
+    .navbar .nav-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .navbar .nav-menu li {
+      position: relative;
+      min-width: 200px;
+      text-align: right;
+    }
+    .navbar .nav-menu li .dot {
+      display: block;
+      color: #fff;
+      padding: 5px 0;
+    }
+    .navbar .nav-menu li .dot::before,
+    .navbar .nav-menu li .dot::after {
+      display: block;
+      position: absolute;
+      content: '';
+      border-radius: 50%;  
+      top: 50%;  
+      transition: all .3s ease;
+    }
+    .navbar .nav-menu li .dot::before {
+      width: 5px;
+      height: 5px;
+      right: 0;
+      border: 2px solid #181818;
+      transform: translateY(-50%);
+    }
+    .navbar .nav-menu li .dot::after {
+      width: 15px;
+      height: 15px;
+      border: 2px solid #f44336;
+      right: -5px;
+      transform: translateY(-50%) scale(0);
+    }
+    .navbar .nav-menu li .dot.actxive::before,
+    .navbar .nav-menu li:hover .dot::before {
+      background: #f44336;
+      border-color: #f44336;
+    }
+    .navbar .nav-menu li .dot.active::after,
+    .navbar .nav-menu li:hover .dot::after {
+      transform: translateY(-50%) scale(1);  
+    }
+    .navbar .nav-menu li .dot span {
+      display: inline-block;
+      opacity: 0;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: capitalize;
+      background-color: #f44336;
+      padding: 10px 20px;
+      border-radius: 3px;
+      margin-right: 30px;
+      transform: translateX(20px);
+      transition: all .3s ease;
+    }
+    .navbar .nav-menu li .dot span::before {
+      display: block;
+      position: absolute;
+      content: '';
+      border-left: 7px solid #f44336;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      top: 50%;
+      transform: translate(7px, -50%);
+      right: 0;
+      transition: all .3s ease;
+    }
+    .navbar .nav-menu li .dot.active span,
+    .navbar .nav-menu li:hover .dot span {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    /* End Nav Styles */
+
+    /* Start Home Styles */
+    #home {
+      background-color: #f6f6f6;
+    }
+    #home button {
+      border: 2px solid #ffc107;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 25px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      transition: all .3s ease;
+      margin-top: 20px;
+    }
+    #home button:hover {
+      background-color: #ffc107;
+      color: #fff;
+    }
+    /* End Home Styles */
+
+    /* Start About Styles */
+    #about .container {
+      padding: 100px 0;
+    }
+    #about p {
+      width: 60%;
+      margin: 10px auto;
+    }
+    #about img {
+      margin-top: 40px;
+    }
+    /* End About Styles */
+
+    /* Start Services Styles */
+    #services {
+      background-color: #eee;
+    }
+    #services .services {
+      margin: 40px auto;
+    }
+    #services .services .service {
+      width: 50%;
+      padding: 1%;
+    }
+
+    #services .text-right {
+      float: right;
+    }
+    #services .text-left {
+      float: left;
+    }
+    /* End Services Styles */
+
+    /* Start Testimonials Styles */
+    #test,
+    #test .content-wrapper {
+      min-height: 400px;
+    }
+    /* End Testimonials Styles */
+
+    /* Start Contact Styles */
+    #contact {
+      min-height: 600px;
+      background-color: #222;
+      color: #fff;
+    }
+    #contact .content-wrapper {
+      min-height: 600px;
+    }
+    #contact p {
+      color: #eee
+    }
+    #contact .mail {
+      font-size: 30px;
+      margin-top: 40px;
+    }
+    /* End Contact Styles */
+
+    /* Start Footer Styles */
+    footer {
+      background-color: #000;
+      padding: 40px 0;
+    }
+    footer p {
+      margin: 0;
+      color: #fff;
+      font-size: 20px;
+      letter-spacing: .5px;
+      font-weight: 700;
+    }
+    /* End Footer Styles */
+
+
+
+    /**
+    *
+    *  I used Normalize.css to reset elements.
+    *  I used Autoprifixer to make sure that I'm using the necessary vendor prefixes.
+    *
+    **/
+</style>
+<body>
+    <!-- Start Nav Section -->
+    <nav id="navbar" class="navbar">
+            <ul class="nav-menu">
+              <li>
+                <a data-scroll="home" href="#home" class="dot active">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a data-scroll="about" href="#about" class="dot">
+                  <span>About me</span>
+                </a>
+              </li>
+              <li>
+                <a data-scroll="services" href="#services" class="dot">
+                  <span>Services</span>
+                </a>
+              </li>
+              <li>
+                <a data-scroll="test" href="#test" class="dot">
+                  <span>Testimonials</span>
+                </a>
+              </li>
+              <li>
+                <a data-scroll="contact" href="#contact" class="dot">
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Nav Section -->
+
+          <!-- Start Home Section -->
+          <section id="home" class="section">
+            <div class="container">
+              <div class="content-wrapper text-center">
+                <div class="content">
+                  <h1>Hello, I'm Ahmed Beheiry <br />Front-End Developer</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore odit ipsam expedita dolorem.<br /> Distinctio, aliquid minima voluptatem saepe.</p>
+                  <button>Read More</button>
+                </div>
+              </div>  
+            </div>
+          </section>
+          <!-- End Home Section -->
+
+          <!-- Start About Me Section -->
+          <section id="about">
+            <div class="container text-center">
+                  <h2>Competently communicate cross-media human capital.</h2>
+                  <p>Synergistically implement end-to-end vortals after top-line meta-services. Completely productivate enterprise bandwidth rather.</p>
+                  <img src="http://placehold.it/700x400/346df1/fff?text=Ahmed+Beheiry" alt="" />
+            </div>
+          </section>
+          <!-- End About Me Section -->
+
+          <!-- Start Services Section -->
+          <section id="services" class="section">
+            <div class="container">
+              <div class="content-wrapper text-center">
+                <div class="content">
+                  <h2>My Services</h2>
+                  <p>compelling channels whereas user-centric e-services. Phosfluorescently productivate.</p>
+                  <div class="services">
+                    <div class="service text-left">
+                      <h4>Service No. (1)</h4>
+                      <p>Proactively integrate front-end infomediaries before cooperative leadership skills. Progressively repurpose value-added leadership skills with interactive leadership. Progressively.</p>
+                    </div>
+                    <div class="service text-right">
+                      <h4>Service No. (2)</h4>
+                      <p>Continually extend sustainable e-commerce before reliable metrics. Efficiently expedite low-risk high-yield catalysts for change via error-free value.</p>
+                    </div>
+                    <div class="service text-left">
+                      <h4>Service No. (3)</h4>
+                      <p>Phosfluorescently syndicate progressive content without principle-centered content. Seamlessly restore leading-edge web services via cooperative technology. Authoritatively maximize.</p>
+                    </div>
+                    <div class="service text-right">
+                      <h4>Service No. (4)</h4>
+                      <p>Conveniently scale market-driven schemas before dynamic action items. Quickly visualize real-time niche markets vis-a-vis future-proof infomediaries. Progressively.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>  
+          <!-- End Services Section -->
+
+          <!-- Start Testimonials Section -->
+          <section id="test" class="section">
+            <div class="container">
+              <div class="content-wrapper text-center">
+                <div class="content">
+                  <h2>My Clients Say</h2>
+                  <p>Monotonectally procrastinate backend interfaces vis-a-vis bricks-and-clicks action items.</p>
+                  <div class="client">
+                    <p>Collaboratively procrastinate interactive platforms via world-class customer service. Uniquely optimize ethical partnerships rather than functional niches. Synergistically predominate distributed functionalities with exceptional ROI. Continually.</p>
+                    <h4>Ahmed Beheiry</h4>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </section>
+          <!-- End Testimonials Section -->
+
+          <!-- Start Contact Section -->
+          <section id="contact">
+            <div class="container">
+              <div class="content-wrapper text-center">
+                <div class="content">
+                  <h2>Contact Me</h2>
+                  <p>disintermediate multimedia based e-markets whereas interoperable value.</p>
+                  <p class="mail">Ahmed_beheiry@yahoo.com</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Contact Section -->
+
+
+          <!-- Start Footer Section -->
+          <footer>
+            <div class="container text-center">
+              <p>&copy; Ahmed Beheiry 2017</p>
+            </div>
+          </footer>
+          <!-- End Footer Section -->
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function() {
+
+      var link = $('#navbar a.dot');
+
+      // Move to specific section when click on menu link
+      link.on('click', function(e) {
+        var target = $($(this).attr('href'));
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 600);
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+
+      // Run the scrNav when scroll
+      $(window).on('scroll', function(){
+        scrNav();
+      });
+
+      // scrNav function 
+      // Change active dot according to the active section in the window
+      function scrNav() {
+        var sTop = $(window).scrollTop();
+        $('section').each(function() {
+          var id = $(this).attr('id'),
+              offset = $(this).offset().top-1,
+              height = $(this).height();
+          if(sTop >= offset && sTop < offset + height) {
+            link.removeClass('active');
+            $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
+          }
+        });
+      }
+      scrNav();
+    });
+</script>
