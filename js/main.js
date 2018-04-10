@@ -47,7 +47,7 @@ $(document).ready(function(){
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3
@@ -55,3 +55,15 @@ $(document).ready(function(){
     }
   })
 });
+
+// Magnific Popup jQuery Lightbox Gallery Settings
+$('.gallery-link').magnificPopup({
+  type: 'image',
+  gallery: {
+      enabled: true
+  },
+  image: {
+      titleSrc: 'title'
+  }
+});
+

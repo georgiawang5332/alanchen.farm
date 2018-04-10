@@ -8,7 +8,7 @@
     list-style-type: none;
     text-decoration:none;
     text-transform: uppercase;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
   }
   body {
     font-size: 14px;
@@ -21,9 +21,9 @@
     color: #565656;
     line-height: 1.8;
   }
-  /* .section {
+  .section {
     min-height: 800px; 
-  }*/
+  }
   .container {
     width: 1170px;
     max-width: 90%;
@@ -44,16 +44,24 @@
     /* height: 100vh; */
     position: relative;
   }
-  .mail{
-    word-wrap: break-word;
-  }
+
   /* End Global Styles */
-
-  
-
-
-
-
+  .navbar-default .navbar-brand{
+    color:#fff;
+  }
+  .navbar-default .navbar-brand:hover{
+    color:#fff;
+  }
+  .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+    color:#fff;
+  }
+  .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a{
+    color:#fff;
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+    background-color: #fff;
+  }
+/* #638f34 */
   /* 
   -----------------------home /index
   */
@@ -65,7 +73,6 @@
     width: 100%;
     height: 5%;
     text-align: center;
-    /* float: left; */
 }
 .navbar-header{
     text-align: center;
@@ -85,9 +92,7 @@
 .contact-f{
   background-color: #78ae32;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
-  background-color: #638f34;
-}
+
   /* 
   -----------------------about 
   */
@@ -275,7 +280,45 @@
     *
     **/
 
-    
+    h1{
+      margin: 0;
+    }
+    .preface-about{
+      padding-top: 10%;
+    }
+    .preface-news{
+      padding-top: 8%;
+    }
+    #about p{
+      width: 90%;
+    }
+    .control-all{
+      position: relative;
+      top: 50%;
+    }
+    .carousel-control{
+      opacity: .0;
+    }
+    .carousel-control .left{
+      left: -40px;
+    }
+    .carousel-control .right{
+      left: 40px;
+    }
+    .stars {
+      color: #f1c40f;
+    }
+    .news-img{
+      top: 40px;
+    }
+    .carousel-indicators{
+      bottom: -45px;
+    }
+    .carousel-indicators li{
+      background: #7cb342;
+      border:2px solid #7cb342;
+    }
+
 
     /*
     ----------------------- course/Process 
@@ -350,14 +393,16 @@
     .contact-row{
       height: 100vh;
     }
-
+    .mail{
+      word-wrap: break-word;
+    }
 
 
     /* 
     ------------------------footer
     */
     .foot-all{
-      /* background-color:#000; */
+      background-color:#78ae32;
       background-image:url('https://convertingcolors.com/plain-78AE32.svg');
       background-repeat:no-repeat;
       background-attachment:fixed;
@@ -376,6 +421,15 @@
       }
       /* index */
       /* about */
+      .preface-about{
+        /* padding-top: 40px; */
+      }
+      .preface-news{
+        padding-top: 0;
+      }
+      .news-img{
+      }
+
       /* course */
       /* products */
       /* form */
@@ -405,6 +459,14 @@
       }
       /* index */
       /* about */
+      .preface-about{
+      }
+      .preface-news{
+      }
+      .news-img{
+        top: 0;
+      }
+      
       /* course */
       /* products */
       /* form */
@@ -415,6 +477,13 @@
     @media (max-width: 991.98px) {
       /* index */
       /* about */
+      .preface-about{
+      }
+      .preface-news{
+      }
+      .news-img{
+        top: 0;
+      }
       /* course */
       /* products */
       /* form */
