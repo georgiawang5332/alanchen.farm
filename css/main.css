@@ -8,17 +8,17 @@
     list-style-type: none;
     text-decoration:none;
     text-transform: uppercase;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
   body {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     /* color: #333; */
     /* background: #000; */
   }
   p {
-    color: #565656;
+    /* color: #565656; */
     line-height: 1.8;
   }
   .section {
@@ -92,6 +92,8 @@
 .contact-f{
   background-color: #78ae32;
 }
+
+
 
   /* 
   -----------------------about 
@@ -184,9 +186,6 @@
     /* End Nav Styles */
 
     /* Start Home Styles */
-    #home {
-      background-color: #f6f6f6;
-    }
     #home button {
       border: 2px solid #ffc107;
       background-color: transparent;
@@ -205,9 +204,6 @@
     /* End Home Styles */
 
     /* Start About Styles */
-    #about .container {
-      padding: 100px 0;
-    }
     #about p {
       width: 60%;
       margin: 10px auto;
@@ -238,10 +234,10 @@
     /* End Services Styles */
 
     /* Start Testimonials Styles */
-    #test,
+    /* #test,
     #test .content-wrapper {
       min-height: 400px;
-    }
+    } */
     /* End Testimonials Styles */
 
     /* Start Contact Styles */
@@ -273,12 +269,12 @@
     }
     /* End Footer Styles */
 
-    /**
-    *
+    /*
     *  I used Normalize.css to reset elements.
     *  I used Autoprifixer to make sure that I'm using the necessary vendor prefixes.
-    *
     **/
+
+    /*  */
 
     h1{
       margin: 0;
@@ -287,7 +283,7 @@
       padding-top: 10%;
     }
     .preface-news{
-      padding-top: 8%;
+      /* padding-top: 8%; */
     }
     #about p{
       width: 90%;
@@ -312,12 +308,20 @@
       top: 40px;
     }
     .carousel-indicators{
-      bottom: -45px;
+      bottom: -35px;
     }
     .carousel-indicators li{
       background: #7cb342;
       border:2px solid #7cb342;
     }
+
+    /* 休閒農場介紹 */
+    .int-center-vertical{
+      float: none;
+      position: relative;
+      top: 50%;
+      transform: translateY(70%);
+    } 
 
 
     /*
@@ -340,46 +344,58 @@
         top: -4px;
         color: rgb(255, 255, 255,.9);
     }
-
-
-
-
-
-
-
+    .course-center-vertical{
+      float: none;
+      position: relative;
+      top: 100%;
+      transform: translateY(40%);
+    }
 
 
 
     /* 
     -----------------------products 
     */
-    section.page-section {
-      padding: 100px 0;
+    section.page-section{
+      padding: 75px 0;
       min-height: 100vh;
     }
+    /* about product both */
+    section.section_page{
+      padding: 180px 0;
+    }
     .container {
-        position: relative;
+      position: relative;
     }
     .portfolio-gallery{
-        float: left;
+      float: left;
     }
-    @media (max-width: 767px) {
-      section.page-section {
-        padding: 75px 0;
-      }
-    }
-      
     .bg-light {
-        background-color: #f8f9fa!important;
+      background-color: #f8f9fa!important;
     }
-
-/* 商品列表下面點不見了找不到他 green.css裡面 */
-
+    .box .txt{
+        position: absolute;	
+        bottom: 0px;	
+        left: 0;	
+        right: 0;
+        height: 30%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(0,0,0,.6);
+        color:#fff;
+        transition: height .5s cubic-bezier(.63,1.57,.82,1.35);
+        /* padding-left: 18px;	 */
+        box-sizing: border-box;
+    }
+    .box:hover .txt{
+        width: 100%;
+        height: 50%;	
+    }
 
     /* 
     -----------------------form 
     */
-
 
     /* 
     -----------------------contact
@@ -397,7 +413,11 @@
       word-wrap: break-word;
     }
 
-
+    .image-farm img{
+      height: 400px; 
+      width:70%;
+      padding: 20px 0 0 0 ;
+    }
     /* 
     ------------------------footer
     */
@@ -407,40 +427,64 @@
       background-repeat:no-repeat;
       background-attachment:fixed;
       background-position:center;
-
       color: #fff;
       opacity: 8;
     }
 
+    /* 
+    ------------------------scroll top 
+    */
+     #back-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 35px;
+        z-index: 9999;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 30px;
+        background: Transparent;
+        color: #444;
+        cursor: pointer;
+        border: 0;
+        border-radius: 2px;
+        text-decoration: none;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+    }
+    #back-to-top:hover {
+      background: #638f34;
+    }
+    #back-to-top.show {
+      opacity: 1;
+    } 
+
+
 
     /* // Extra small devices (portrait phones, less than 576px) */
     @media (max-width: 575.98px) {
-      /* gl all*/
+      /* 
+      Global all
+      */
       .collapse{
         float: none;
       }
-      /* index */
-      /* about */
-      .preface-about{
-        /* padding-top: 40px; */
-      }
-      .preface-news{
-        padding-top: 0;
-      }
-      .news-img{
-      }
-
-      /* course */
-      /* products */
-      /* form */
-      /* contact */
+      /* 休閒農場介紹與新聞相關報導 */
+      .center-vertical{
+        float: none;
+        position: relative;
+        top: 50%;
+        transform: translateY(0%);
+      } 
     }
 
     /* // Small devices (landscape phones, less than 768px) */
     @media (max-width: 767.98px) {
-      /* Global all */
       /* 
-      ..............navbar
+      Global all
+      */
+      /* 
+      navbar
        */
       .navbar-brand{
         display: none;
@@ -451,51 +495,81 @@
       .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
         background-color: #638f34;
       }
-
       .navbar-toggle{
         margin: 10px;
         border:none;
         outline: none;
       }
-      /* index */
-      /* about */
-      .preface-about{
-      }
-      .preface-news{
-      }
+      /* 
+      about 
+      */
       .news-img{
         top: 0;
       }
-      
-      /* course */
-      /* products */
-      /* form */
-      /* contact */
+      /* about : product both */
+      section.section_page{
+        padding: 50% 0;
+      }
+      /* 休閒農場介紹  */
+      .int-center-vertical{
+        float: none;
+        position: relative;
+        top: 50%;
+        transform: translateY(0%);
+      }
+      /* 新聞報導 */
+      .news-center-vertical{
+        float: none;
+        position: relative;
+        top: 50%;
+        transform: translateY(0%);
+      }
+      /* news */
+        .preface-news {
+          padding-top: 0;
+      }
+      /* 課程 */
+      .course-center-vertical{
+        float: none;
+        position: relative;
+        top: 50%;
+        transform: translateY(0%);
+      }  
+      /* 
+      contact
+      */
+      .image-farm img{
+        height: 150px; 
+        width:100%;
+        padding: 10px 0 0 0 ;
+      }
+
     }
 
     /* // Medium devices (tablets, less than 992px) */
     @media (max-width: 991.98px) {
-      /* index */
-      /* about */
-      .preface-about{
-      }
-      .preface-news{
-      }
+      /* 
+      Global all
+      */
+      /* 
+      about
+       */
       .news-img{
         top: 0;
       }
-      /* course */
-      /* products */
-      /* form */
-      /* contact */
+      /* about : product both */
+      section.section_page{
+        padding: 50% 0;
+      }
     }
 
     /* // Large devices (desktops, less than 1200px) */
     @media (max-width: 1199.98px) {
-      /* index */
-      /* about */
-      /* course */
-      /* products */
-      /* form */
-      /* contact */
+      /* 
+      Global all
+      */
+      /* about 、 product both */
+      section.section_page{
+        padding: 50% 0;
+      }
     }

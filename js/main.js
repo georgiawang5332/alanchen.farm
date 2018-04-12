@@ -56,14 +56,61 @@ $(document).ready(function(){
   })
 });
 
-// Magnific Popup jQuery Lightbox Gallery Settings
-$('.gallery-link').magnificPopup({
-  type: 'image',
-  gallery: {
-      enabled: true
-  },
-  image: {
-      titleSrc: 'title'
-  }
-});
 
+
+// scrolltop
+// $(document).ready(function () {
+
+//   $(window).scroll(function () {
+//       if ($(this).scrollTop() > 100) {
+//           $('.scroll-top').fadeIn();
+//       } else {
+//           $('.scroll-top').fadeOut();
+//       }
+//   });
+
+//   $('.scroll-top').click(function () {
+//       $("html, body").animate({
+//           scrollTop: 0
+//       }, 100);
+//       return false;
+//   });
+
+// });
+
+
+
+
+
+
+if ($('#back-to-top').length) {
+  var scrollTrigger = 50, // px
+      backToTop = function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop >= scrollTrigger) {
+            // console.log('A');
+              $('#back-to-top').addClass('show');
+              // $('#back-to-top').css('opacity','1');
+          } else {
+            // console.log('B');
+              $('#back-to-top').removeClass('show');
+              // $('#back-to-top').css('opacity','0');
+          }
+      };
+  backToTop();
+  $(window).on('scroll', function () {
+      backToTop();
+  });
+  $('#back-to-top').on('click', function (e) {
+      e.preventDefault();
+      $('html,body').animate({
+          scrollTop: 0
+      }, 2000);
+  });
+}
+  
+
+
+
+
+  
