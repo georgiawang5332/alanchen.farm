@@ -419,6 +419,9 @@
     }
     .contact-row{
       height: 100vh;
+      position: relative;
+      top: 20%;
+
     }
     .mail{
       word-wrap: break-word;
@@ -765,6 +768,12 @@
         width:100%;
         padding: 10px 0 0 0 ;
       }
+      .contact-row{
+        height: 100vh;
+        position: relative;
+        top: -50%;
+
+      }
       /*  */
     }
 
@@ -784,6 +793,12 @@
         padding: 50% 0;
       }
 
+      .contact-row{
+        height: 100vh;
+        position: relative;
+        top: 10%;
+
+      }
     }
 
     /* // Large devices (desktops, less than 1200px) */
