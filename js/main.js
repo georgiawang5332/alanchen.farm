@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 
-
+// scroll to Top
 if ($('#back-to-top').length) {
   var scrollTrigger = 50, // px
       backToTop = function () {
@@ -111,6 +111,40 @@ if ($('#back-to-top').length) {
   
 
 
+
+/*
+  form （Registration Form）
+*/
+
+$(document).ready(function(){
+  $('div.wrapper').addClass('js');
+  //先消失
+  $('.personalSame').slideUp();
+
+  var $tab = $('li.js-navbars-title'),
+      $tabPanel = $('.tabpanel'),
+      activeClass = "on";
+
+  $tab.eq(0).addClass(activeClass);
+
+  $tab.each(function(index,element){
+      var $tabTrigger = $(this),
+          tabPosition = index;
+
+      $tabTrigger.click(function(e){
+          e.preventDefault();
+          // $tab.removeClass(activeClass);
+          $(this).addClass(activeClass);
+          $tabPanel.hide();
+          $tabPanel.each(function(index,element){
+              var tabPanelPosition = index;
+              if(tabPosition === tabPanelPosition){
+                  $(this).show();
+              }
+          });
+      });
+  });
+}); // ready
 
 
   
