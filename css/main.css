@@ -21,13 +21,13 @@
     font-size: 14px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    /* color: #333; */
-    /* background: #000; */
+    font-weight: normal;
   }
   p {
     line-height: 1.6;
     font-size: 16px;
   }
+ 
   .section {
     min-height: 800px; 
   }
@@ -69,7 +69,8 @@
     color:#fff;
   }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
-    background-color: #fff;
+    background-color: #89ba54;
+    color:#4a6b27;
   }
 /* #638f34 */
   /* 
@@ -100,6 +101,9 @@
 .navbar-header{
     text-align: center;
     float: left;
+    border: none;
+    outline: none;
+
 } 
 .collapse{
     float:right;
@@ -135,7 +139,7 @@
     }
     .navbar-dot .nav-menu li {
       position: relative;
-      min-width: 200px;
+      /* min-width: 200px; */
       text-align: right;
     }
     .navbar-dot .nav-menu li .dot {
@@ -394,6 +398,7 @@
     .slidebar {
       /* display: inline-block; */
       background-color: #fff;
+      font-weight: normal;
     }
     .slidebar ul {
       position:relative;
@@ -408,7 +413,6 @@
       padding: 0px 0px;
       display: inline-block;
     }
-
     ul {
       padding: 0;
       margin:0;
@@ -417,30 +421,31 @@
       list-style-type: none;
       margin: 0;
       text-align:center;
-      color:#d7d7d7;
+      color:#b3b3b3;
     }
     .slidebar i {
       text-align:center;
-      color:#d7d7d7;
+      color:#b3b3b3;
+      font-size: 20px;
     }
-
     .slidebar ul a {
-      color:#d7d7d7;
+      color:#b3b3b3;
       display: inline-block;
       padding: 20px;
       border-radius:6px; 
     }
     .slidebar li:hover a, li#active{
-      background-color: #78ae32;
+      background-color: #dfe7cb;
     }
     .main {
       width: 100%;
-      position: relative;
+      /* position: relative; */
     }
     .main h2 {
-      font-size: 20px;
-      font-weight:600;
+      font-size: 16px;
+      /* font-weight:600; */
       padding: 0px 0px 20px 0px;
+
     }
 
 
@@ -460,6 +465,8 @@
     .send-mailBag{
       width: 50%;
       background: #e9edf0;
+      padding: 10px;
+      border: 20px solid #d7d7d7;
     }
     .container-button{
       max-width:50%;
@@ -712,16 +719,16 @@
       /* 
       products
       */
-      .slider-active .owl-dots{
+      /* .slider-active .owl-dots{
         position: relative;
         top: -75px;
-      }
-      .owl-nav button.owl-prev{
+      } */
+      /* .owl-nav button.owl-prev{
         opacity: 0;
       }
       .owl-nav button.owl-next{
         opacity: 0;
-      }
+      } */
     }
 
     /* // Small devices (landscape phones, less than 768px) */
@@ -729,9 +736,6 @@
       /* 
       Global all
       */
-      section.page-section{
-        padding: 0;
-      }
       /* 
       navbar
        */
@@ -742,17 +746,22 @@
         float: none;
       }
       .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-        background-color: #638f34;
+        background-color: #89ba54;
+        border: none;
+        outline: none;
+        border-radius: 0px;
       }
-      .navbar-toggle{
-        margin: 10px;
+      .navbar-default .navbar-toggle{
+        /* margin: 10px; */
         border:none;
         outline: none;
+        border-radius: 0px;
+        
       }
       /* Start Nav Styles */
       .navbar-dot {
         right: 20px;
-        }
+      }
       /* 
       about 
       */
@@ -763,7 +772,6 @@
       section.section_page{
         padding: 50% 0;
       }
-
       /* 休閒農場介紹  */
       .int-center-vertical{
         float: none;
@@ -789,19 +797,11 @@
         top: 50%;
         transform: translateY(0%);
       }  
+      
       /* 
       products
       */
-      .slider-active .owl-dots{
-        position: relative;
-        top: -75px;
-      }
-      .owl-nav button.owl-prev{
-        opacity: 0;
-      }
-      .owl-nav button.owl-next{
-        opacity: 0;
-      }
+      
       /* 
       contact
       */
@@ -812,13 +812,14 @@
       }
       .contact-row{
         height: 100vh;
-        position: relative;
-        top: -50%;
+        top: 5%;
       }
       .send-mailBag{
         width: 100%;
       }
-      
+      .slidebar li{
+        display: block;
+      }
     }
 
     /*  Medium devices (tablets, less than 992px) */
@@ -846,6 +847,12 @@
       .int-center-vertical{
         transform: translateY(8%);
       }
+      /* 
+      contact
+      */
+      .contact-row{
+        top: 26%;
+      }
     }
 
     /*  Large devices (desktops, less than 1200px) */
@@ -856,10 +863,6 @@
       /* about 、 product both */
       section.section_page{
         padding: 50% 0;
-      }
-      .contact-row{
-        height: 100vh;
-        top: 20%;
       }
       /* course */
       .course-center-vertical{
@@ -875,13 +878,14 @@
 
 
     /* products css navbar 效果 */
-    /* .slider-active .owl-nav button{
-      height: 60px;
-      width: 60px;
+    .slider-active .owl-nav button{
+      height: 30px;
+      width: 30px;
     }
     .slider-active .owl-nav button i{
-      font-size: 60px;
+      font-size: 30px;
     }
+    /*
     .slider-active .owl-dots{
       left: 0;
       right: 0;
