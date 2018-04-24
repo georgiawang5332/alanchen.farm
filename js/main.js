@@ -139,7 +139,7 @@ $(document).ready(function(){
           $tabPanel.each(function(index,element){
               var tabPanelPosition = index;
               if(tabPosition === tabPanelPosition){
-                  $(this).show();
+                $(this).show();
               }
           });
       });

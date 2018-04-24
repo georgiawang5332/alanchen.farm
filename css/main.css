@@ -22,6 +22,7 @@
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
+    background: url(https://www.yonglinfarm.com.tw/_nuxt/img/bg_about.61adae2.png);
   }
   p {
     line-height: 1.6;
@@ -29,7 +30,7 @@
   }
  
   .section {
-    min-height: 800px; 
+    min-height: 500px; 
   }
   .container {
     width: 1170px;
@@ -73,6 +74,18 @@
     color:#4a6b27;
   }
 /* #638f34 */
+
+.bannerArea ul#banner > li {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center 55%;
+    background-attachment: fixed;
+    opacity: .4;
+  }
+
+
   /* 
   -----------------------home /index
   */
@@ -121,6 +134,7 @@
 
 
 
+
   /* 
   -----------------------about 
   */
@@ -160,13 +174,13 @@
       width: 5px;
       height: 5px;
       right: 0;
-      border: 2px solid #181818;
+      border: 2px solid #b9b9b9;
       transform: translateY(-50%);
     }
     .navbar-dot .nav-menu li .dot::after {
       width: 15px;
       height: 15px;
-      border: 2px solid #f44336;
+      border: 2px solid #7cb342;
       right: -5px;
       transform: translateY(-50%) scale(0);
     }
@@ -312,7 +326,7 @@
       float: none;
       position: relative;
       top: 50%;
-      transform: translateY(70%);
+      transform: translateY(60%);
     } 
 
     /*
@@ -336,12 +350,21 @@
         color: rgb(255, 255, 255,.9);
     }
     .course-center-vertical{
-      float: none;
-      position: relative;
-      top: 100%;
-      transform: translateY(40%);
+      /* float: none; */
+      /* position: relative; */
+      /* top: 100%; */
+      /* transform: translateY(40%); */
     }
 
+    .img-local{
+      background-image: url('https://www.yonglinfarm.com.tw/_nuxt/img/image_local_4_bg.c6ba67c.jpg');
+      width: 100%;
+      height: 156px;
+      /* background-attachment: fixed; */
+      background-position: center; 
+      background-repeat: no-repeat;
+      /* background: olive; */
+    }
 
 
     /* 
@@ -349,12 +372,8 @@
     */
     section.page-section{
       padding: 75px 0;
-      min-height: 100vh;
     }
     /* about product both */
-    section.section_page{
-      padding: 180px 0;
-    }
     .container {
       position: relative;
     }
@@ -392,7 +411,7 @@
       max-width:900px;
       margin: 50px auto;
       overflow: hidden;
-      background-color:#fff;
+      background-color:url('https://www.yonglinfarm.com.tw/_nuxt/img/bg_about.61adae2.png');
       position:relative;
     }
     .slidebar {
@@ -403,6 +422,7 @@
     .slidebar ul {
       position:relative;
       height:100%;
+      background: url(https://www.yonglinfarm.com.tw/_nuxt/img/bg_about.61adae2.png);
     }
     .slidebar a{
       color: #bbb;
@@ -412,6 +432,7 @@
       text-align:center;
       padding: 0px 0px;
       display: inline-block;
+      
     }
     ul {
       padding: 0;
@@ -440,6 +461,7 @@
     .main {
       width: 100%;
       /* position: relative; */
+      background: url(https://www.yonglinfarm.com.tw/_nuxt/img/bg_about.61adae2.png);
     }
     .main h2 {
       font-size: 16px;
@@ -456,16 +478,14 @@
       height: 100vh;
       background-image: url("../imgs/alanchen/0U2A9444.jpg");
       background-size: cover;
-      background-attachment: fixed;/*這樣視差捲動效果*/
+      background-attachment: fixed;/*視差捲動效果*/
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      /* background: #e9edf0; */
-
     }
     .send-mailBag{
-      width: 50%;
+      width: 60%;
       background: #e9edf0;
-      padding: 10px;
+      /* padding: 10px; */
       border: 20px solid #d7d7d7;
     }
     .container-button{
@@ -474,12 +494,11 @@
     .contact-row{
       height: 100vh;
       position: relative;
-      top: 20%;
+      /* top: 20%; */
     }
     .mail{
       word-wrap: break-word;
     }
-
     .image-farm img{
       height: 400px; 
       width:70%;
@@ -496,7 +515,6 @@
     }
     .container-contact {
       width: 100%;
-      /* background-image:url("../imgs/alanchen/0U2A9444.jpg");  */
     }
     .border-animation {
       --border-width: 0.1em;
@@ -685,7 +703,7 @@
         text-align: center;
         line-height: 30px;
         background: Transparent;
-        color: #444;
+        color: #b9b9b9;
         cursor: pointer;
         border: none;
         border-radius: 2px;
@@ -695,6 +713,7 @@
     }
     #back-to-top:hover {
       font-size: 25px;
+      color: #9b9999;
     }
     #back-to-top.show {
       opacity: 1;
@@ -768,10 +787,6 @@
       .news-img{
         top: 0;
       }
-      /* about : product both */
-      section.section_page{
-        padding: 50% 0;
-      }
       /* 休閒農場介紹  */
       .int-center-vertical{
         float: none;
@@ -801,10 +816,13 @@
       /* 
       products
       */
-      
+    
       /* 
       contact
       */
+      /* .p_s{
+        padding-top: 100px;
+      } */
       .image-farm img{
         height: 150px; 
         width:100%;
@@ -812,7 +830,7 @@
       }
       .contact-row{
         height: 100vh;
-        top: 5%;
+        /* top: 5%; */
       }
       .send-mailBag{
         width: 100%;
@@ -834,12 +852,9 @@
         top: 0;
       }
       .section.page-section{
-        padding: 200px 0;
+        /* padding: 200px 0; */
       }
       /* about : product both */
-      section.section_page{
-        padding: 50% 0;
-      }
       .course-center-vertical{
         transform: translateY(2%);
       }
@@ -860,10 +875,7 @@
       /* 
       Global all
       */
-      /* about 、 product both */
-      section.section_page{
-        padding: 50% 0;
-      }
+      
       /* course */
       .course-center-vertical{
         transform: translateY(0%);
