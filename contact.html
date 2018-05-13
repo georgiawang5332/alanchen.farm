@@ -25,14 +25,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
 
     <header>
       <nav class="navbar navbar-default navbar-top navbar-fixed-top">
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="row ">
 
+            <!-- logo -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="icon-bar" style="background-color: #fff;"></span>
@@ -40,17 +39,17 @@
                 <span class="icon-bar" style="background-color: #fff;"></span>
               </button>
               <a class="navbar-brand logo-title" href="index.html">阿蘭城休閒農場</a>
-
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- nav links -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <!-- <li><a href="index.html">首頁</a></li> -->
-                <li><a href="index.html">關於我</a></li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="index.html">關於農場</a></li>
                 <li><a href="course.html">課程</a></li>
                 <li><a href="products.html">商品一覽</a></li>
-                <li><a href="form.html">報名表</a></li>
+                <!-- <li><a href="form.html">報名表</a></li> -->
+                <li><a href="rental.html">場地租借</a></li>
                 <li class="active"><a href="contact.html">與我聯繫</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -75,12 +74,15 @@
           <!-- <div class="Img"> -->
             <!-- <img src="https://www.cingjing.gov.tw/upload/banner_ins_list/f5271c1214901768fc118dbfb91fb199.jpg" alt="banner" style="width: 100%; height: 300px; background-position: center 55%"> -->
           <!-- </div> -->
-          <div class="Txt">
+
+
+          <!--不需要 -->
+          <!-- <div class="Txt">
             <div class="wrap">
               <em>Welcome to Qinging Farm</em>
               <strong>北歐風情，戀上清境風采</strong>
             </div>
-          </div>
+          </div> -->
 
         </li>	    
       </ul>
@@ -88,16 +90,22 @@
   </div><!--wrap end-->
 </div><!--bannerArea end-->
 
-    <section class="container page-section pricing p_s" id="locations">
-        <div class="row">
-          <div class="col-md-12 text-center">
+    <section class="container section page-section pricing p_s" id="locations" style="padding: 75px 0 65px 0;">
+        <div class="row" style="padding-bottom: 50px;">
+          <!-- <div class="col-md-12 text-center">
             <h2>地點</h2>
             <hr class="colored">
+          </div> -->
+          <div class="intro-title col-md-12 text-center">
+            <h1>
+              <img src="imgs/download11.png" alt="">地點
+            </h1>
+            <img src="imgs/b_simple_114_0L.png" alt="">
           </div>
           <!-- Pricing Table 2 -->
           <div class="col-lg-4 col-md-12">
             <div class="pricing-item text-center">
-              <h3>阿蘭城休閒農場</h3>
+              <h4>阿蘭城休閒農場</h4>
               <p>採預約制</p>
               <hr class="colored">
               <ul class="list-group">
@@ -144,23 +152,24 @@
 
 
     <!-- Contact Section -->
-    <section class="page-section pricing contact-all" id="contact" style="padding-top: 200px;">
-        <div class="container">
+    <section class="page-section pricing contact-all use-flexbox" id="contact">
+        <div class="container ">
             <!-- send-mailBag下  / contact-row 上-->
-          <div class="row text-center center-block send-mailBag">
+          <div class=" container-fluid row text-center center-block send-mailBag">
             
-            <div class="col-md-12 text-center">
+
+            <div class="intro-title col-md-12 text-center">
               <h2>聯絡我們</h2>
-              <hr class="colored" style="width: 90%; border: 1px solid #e4e4e4;">
+              <hr class="colored" style="width: 100%; border: 1px solid #e4e4e4;">
               <p>
-                <h4>想進一步瞭解a-lan-chen產品、服務，或有任何寶貴意見，都歡迎您與我們聯繫，我們將竭誠為您服務!</h4>
+                <h4 class="col-md-12" style="line-height: 1.5;">想進一步瞭解阿蘭城休閒農場（Ａ-Ｌan-Ｃhen）產品、場地租借或有任何寶貴意見，都隨時歡迎您與農場聯繫，我們將竭誠為您服務!</h4>
               </p>
             </div>
 
             <div class="col-md-12 contactUs">
               <div class="container-contact">
                 <a class="border-animation" href="mailto:georgia.wang@genesys-tech.com">
-                  <div class="border-animation__inner">send mail</div>
+                  <div class="border-animation__inner">聯繫農場</div>
                 </a>
               </div>
             </div>
@@ -186,7 +195,7 @@
           </div>
           <div class="col-md-4 footer-contact-details">
             <h4><i class="fa fa-map-marker"></i> Visit</h4>
-            <p>宜蘭縣員山鄉<br>同樂村蘭城路48號</p>
+            <p style="line-height: 1.3;">宜蘭縣員山鄉<br>同樂村蘭城路48號</p>
           </div>
           <div class="col-md-4 footer-contact-details">
             <h4><i class="fa fa-envelope"></i> 粉絲團</h4>
@@ -207,14 +216,14 @@
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-twitter fa-fw fa-2x"></i>
+                  <i class="fa fa-envelope fa-fw fa-2x"></i>
                 </a>
               </li>
-              <li class="list-inline-item">
+              <!-- <li class="list-inline-item">
                 <a href="#">
                   <i class="fa fa-linkedin fa-fw fa-2x"></i>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>

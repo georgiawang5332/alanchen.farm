@@ -1,6 +1,6 @@
 /* google fonts */
-@import url(https://fonts.googleapis.com/css?family=Six+Caps);
-/* Global Styles */
+/* @import url(https://fonts.googleapis.com/css?family=Six+Caps); */
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Lora|PT+Sans|Roboto+Slab');
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -10,27 +10,47 @@
     list-style-type: none;
     text-decoration:none;
     text-transform: uppercase;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
+    /* 鎖右鍵無法複製 文字 */
+    -webkit-user-select: none;/* Safari 3.1+ */
+    -moz-user-select: none;/* Firefox 2+ */
+    -ms-user-select: none;/* IE 10+ */
+    user-select: none;/* Standard syntax */
   }
-  .clearfix::after {
+  /*
+   * Helpers Clearfix
+   */
+  .clearfix:before,
+  .clearfix:after {
       content: "";
-      clear: both;
       display: table;
   }
+  .clearfix:after {
+      clear: both;
+  }
+  /* Global Styles */
   body {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-size: 16px;
+    /* font-weight: 400; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'PT Sans', sans-serif; */
+    /* font-family: 'Roboto Slab', serif; */
+    /* font-family: 'Lora', serif; */
+    /* font-family: 'Crimson Text', serif; */
+    font-weight: normal;/*mistake*/
     background: url(https://www.yonglinfarm.com.tw/_nuxt/img/bg_about.61adae2.png);
   }
   p {
     line-height: 1.6;
     font-size: 16px;
+    margin: 0;
   }
- 
-  .section {
-    min-height: 500px; 
+  /* title h1 需要往上下去推 */
+  .page-section{
+    padding: 75px 0 75px 0;
+  }
+  .paddingLeftrightZ{
+    padding: 0;
   }
   .container {
     width: 1170px;
@@ -52,8 +72,8 @@
     /* height: 100vh; */
     position: relative;
   }
-
   /* End Global Styles */
+
   .logo-title{
     font-size: 25px;
   }
@@ -70,7 +90,7 @@
     color:#fff;
   }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
-    background-color: #89ba54;
+    background-color: #f8f9f9;
     color:#4a6b27;
   }
 /* #638f34 */
@@ -82,17 +102,19 @@
     background-repeat: no-repeat;
     background-position: center 55%;
     background-attachment: fixed;
-    opacity: .4;
+    opacity: .3;
   }
-
-
   /* 
   -----------------------home /index
   */
 .index-img{
   width: 100%;
   height: 100vh;
-  background-image: url(../imgs/alanchen/2G0A9537.jpg);
+  background-image: url('../imgs/alanchen/2G0A9442.jpg');
+  /* 
+  ../imgs/alanchen/2G0A9537.jpg
+
+  http://www.conjugallove.com/upload/banner_ins_list/f5271c1214901768fc118dbfb91fb199.jpg */
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -131,13 +153,430 @@
 .contact-f{
   background-color: #78ae32;
 }
+/* 最新消息 */
+.new-deal{
+  width:100%;
+  float:left;
+  padding:15px 0;
+}
+.demoFirst {
+  position:relative;
+  width:100%;
+  height:200px;
+  overflow:hidden;
+  float:left;
+  margin-right:20px;
+  background-color:rgba(167, 189, 204, 0.5);
+}
+.demoFirst li {
+  /* display: inline-block; */
+  list-style: none;
+  margin:0;
+  color:#000;  
+  font-size: 16px;
+}
+.news-Ptop{
+  padding-top: 15px;
+}
+.lease-padding{
+  padding: 5px;
+}
+/* .demoFirst p , .demoFirst h2 {
+  color:#fff;
+  padding:10px;
+  left:-20px;
+  top:20px;
+  position:relative;
+} */
+/* .demoFirst p {
+  font-size:12px;
+  line-height:18px;
+  margin:0;
+} */
+/* .demoFirst h2 {
+  font-size:20px;
+  line-height:24px;
+  margin:0;
+} */
+.txt-size{
+  font-size: 18px;
+}
+.txt-time{
+  font-size: 16px;
+}
+.effect{
+  padding: 10px;
+}
+.effect img {
+  position:absolute;
+  left:0;
+  bottom:0;
+  cursor:pointer;
+  width: 100%;
+  -webkit-transition:bottom .3s ease-in-out;-moz-transition:bottom .3s ease-in-out;-o-transition:bottom .3s ease-in-out;
+  transition:bottom .3s ease-in-out;
+}
+.effect img.top:hover {
+  bottom: -140px;
+  padding-top:100px; 
+}
+.effect img.alone:hover{
+  bottom: -190px;
+  padding-top:100px ;
+}
+h2.zero , p.zero {
+  margin:0;
+  padding:0;
+}
 
+/* 商品一覽 */
 
+/* GRID */
+.grid { max-width: 940px; width: 100%; margin: 0 auto; }
 
+/* COLUMNS */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table; 
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* product OVERLAY */
+
+.boxProduct {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #bbb;
+  text-align: center;
+  position: relative;
+}
+.overlay{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.overlay a{
+  text-decoration:none;
+  color: #000;
+}
+
+/* SLIDE IN */
+.prodt-img-one{
+  background-image: url(../imgs/alanchen/0U2A9465.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+
+.slide-in .overlay{
+  background-color: #6addaa;
+  opacity: .7;
+  /* background-image: url(../imgs/alanchen/0U2A9444.jpg); */
+  line-height: 200px;
+  color: #fff;
+  /* width: 100%;
+  height: 100%; */
+  /* background-position: bottom center; */
+  /* background-clip: border-box; */
+  /* background-repeat: no-repeat; */
+  transform: translateX(-100%);
+  -webkit-transition: transform 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+.slide-in .boxProduct:hover .overlay{
+  transform: translateX(0);
+}
+
+/* SLIDE UP */
+.prodt-img-two{
+  background-image: url(../imgs/alanchen/0U2A9478.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+
+.slide-up .overlay{
+  background-color: #3dcbe8;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: translateY(100%);
+  -webkit-transition: transform 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+
+.slide-up .boxProduct:hover .overlay{
+  transform: translateY(0);
+}
+
+/* SLIDE DOWN DELAY */
+.prodt-img-three{
+  background-image: url(../imgs/alanchen/0U2A9482.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+
+.slide-down-delay .overlay{
+  background-color: #ee6f8c;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: translateY(-100%);
+  -webkit-transition: transform 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+
+.slide-down-delay .boxProduct:hover .overlay{
+  transform: translateY(0);
+}
+
+.slide-down-delay .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.slide-down-delay .boxProduct:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ROTATE */
+.prodt-img-four{
+  background-image: url(../imgs/alanchen/0U2A9485.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+.rotate .overlay{
+  background-color: #6d94bb;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  -webkit-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate .boxProduct:hover .overlay{
+  transform: rotate(0deg);
+}
+
+/* SCALE */
+.prodt-img-five{
+  background-image: url(../imgs/alanchen/2G0A9517.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+.scale .overlay{
+  background-color: #efcb5e;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: translateX(210%) scale(3);
+  -webkit-transition: transform 0.6s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+}
+
+.scale .boxProduct:hover .overlay{
+  transform: translateX(0) scale(1);
+}
+
+/* FLIP */
+.prodt-img-six{
+  background-image: url(../imgs/alanchen/2G0A9528.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+.flip .overlay{
+  background-color: #009688;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  opacity: 0;
+  transform: rotateY(180deg);
+  -webkit-transition: transform 0.6s ease-in-out 0.3s, opacity 0.3s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out 0.3s, opacity .3s ease-in-out;
+  transition: transform 0.6s ease-in-out 0.3s, opacity .3s ease-in-out;
+}
+
+.flip .boxProduct:hover .overlay{
+  opacity: .7;
+  transform: rotateY(0deg);
+}
+/* SKEW 與上面一樣hover效果捨不得刪除*/
+/* .skew .overlay{
+  background-color: #f44336;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: skewX(-10deg);
+  -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.skew .boxProduct:hover .overlay{
+  transform: skewX(0deg);
+  opacity: 1;
+} */
+
+/* CORNER */
+/* .corner-bottom .overlay{
+  background-color: #9c27b0;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: translate(100%, 100%);
+  -webkit-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+.corner-bottom .boxProduct:hover .overlay{
+   transform: translate(0, 0);
+} */
+
+/* CORNER */
+/* .corner-top .overlay{
+  background-color: #ff5722;
+  opacity: .7;
+  line-height: 200px;
+  color: #fff;
+  transform: translate(-100%, -100%);
+  -webkit-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+.corner-top .boxProduct:hover .overlay{
+   transform: translate(0, 0);
+} */
 
   /* 
   -----------------------about 
   */
+
+
+
+
+
+  /* 關於農場品香介紹 */
+  .wHundredPercent{
+    width: 100% !important;
+    /* letter-spacing: 2px; */
+  }
+  .img-paddleft{
+    padding-left: 4.5%;
+  }
+  .intro-title h1{
+    font-size: 23px;
+  }
+  .intro-title h2{
+    padding-top: 10px;
+  }
+  .intro-title > img {
+    width: 100%;
+  }
+  .image-about{
+    width: 100%; 
+    height: 100%;
+  }
+  .image-about img{
+    width: 100%; 
+    height: 100%;
+  }
+  .intro-txt p{
+    width: 100%; 
+    height: 100%;
+    /* font-weight: 500; */
+    line-height: 1.8;    
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around; */
+    justify-content: center;
+    /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around | stretch */
+    align-content: center;
+  }
+  .item {
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+    /* font-size: 2rem;*/
+  }
+  .flex-2 {
+    /* margin-top: 10px; */
+    width: 40%;
+  }
+  .ptten{
+    margin-top: 20px;
+  }
+  /* <!-- Call to Action --> *//* 緩衝區概念 */
+  .call-to-action {
+    width: 100%;
+    background: #7cb342;
+    padding:70px;
+    color:#000; 
+    /* margin: 1% 0 3% 0; */
+  }
+  .callImg{
+    background-image: url(../imgs/alanchen/2G0A9480.jpg);
+    width: 100%;
+    /* margin: 0; */
+    
+    /* background-size: cover; */
+    /* background-attachment: fixed;視差捲動效果 */
+    background-repeat: no-repeat;
+    background-position: 80% 10%;
+  }
+  .call-padding{
+    margin: auto;
+    float:none;
+  }
+  .call-p{
+    font-size: 20px;  
+  }
+  .text-primary{
+    font-size: 25px;
+  }
+  /* 阿蘭城休閒農場 */
+  .image-about{
+    width: 50%;
+    height: 100%;
+  }
+  .image-about img{
+    width: 100%;
+    height: 100%;
+  }
   /* Start Nav Styles */
     .navbar-dot {
       position: fixed;
@@ -186,42 +625,14 @@
     }
     .navbar-dot .nav-menu li .dot.actxive::before,
     .navbar-dot .nav-menu li:hover .dot::before {
-      background: #f44336;
-      border-color: #f44336;
+      background: #415922;
+      border-color: #415922;
     }
     .navbar-dot .nav-menu li .dot.active::after,
     .navbar-dot .nav-menu li:hover .dot::after {
       transform: translateY(-50%) scale(1);  
     }
     /* End Nav Styles */
-
-    /* Start Home Styles */
-    #home button {
-      border: 2px solid #ffc107;
-      background-color: transparent;
-      outline: none;
-      cursor: pointer;
-      padding: 12px 25px;
-      font-weight: 700;
-      font-family: 'Poppins', sans-serif;
-      transition: all .3s ease;
-      margin-top: 20px;
-    }
-    #home button:hover {
-      background-color: #ffc107;
-      color: #fff;
-    }
-    /* End Home Styles */
-
-    /* Start About Styles */
-    #about p {
-      width: 60%;
-      margin: 10px auto;
-    }
-    #about img {
-      margin-top: 40px;
-    }
-    /* End About Styles */
 
     /* Start Services Styles */
     #services {
@@ -263,24 +674,19 @@
 
     /* Start Footer Styles */
     footer {
-      /* background-color: #000; */
       padding: 40px 0;
     }
     footer p {
       margin: 0;
-      color: #fff;
-      font-size: 20px;
+      /* color: #fff; */
+      font-size: 18px;
       letter-spacing: .5px;
       font-weight: 700;
     }
     /* End Footer Styles */
 
-    /*
-    *  I used Normalize.css to reset elements.
-    *  I used Autoprifixer to make sure that I'm using the necessary vendor prefixes.
-    **/
 
-    /*  */
+    /* about */
 
     h1{
       margin: 0;
@@ -288,11 +694,8 @@
     .preface-about{
       padding-top: 10%;
     }
-    .preface-news{
-      /* padding-top: 8%; */
-    }
     #about p{
-      width: 90%;
+      width: 100%;
     }
     .control-all{
       position: relative;
@@ -320,59 +723,35 @@
       background: #7cb342;
       border:2px solid #7cb342;
     }
-
-    /* 休閒農場介紹 */
-    .int-center-vertical{
-      float: none;
-      position: relative;
-      top: 50%;
-      transform: translateY(60%);
-    } 
-
     /*
     ----------------------- course/Process 
     */
-
-    /* icon 調整 */
-    .icon_circle{
-        font-size: 40px;
-        line-height: 70px;
-        width: 75px;
-        height: 75px;
-        text-align: center;
-        border: 5px solid #fff;
-        border-radius: 50%;
-        text-align: right;
+    li.courseLi{
+      text-align: center;
     }
-    .rounded-circle{
-        position: relative;
-        top: -4px;
-        color: rgb(255, 255, 255,.9);
-    }
-    .course-center-vertical{
-      /* float: none; */
-      /* position: relative; */
-      /* top: 100%; */
-      /* transform: translateY(40%); */
-    }
-
     .img-local{
       background-image: url('https://www.yonglinfarm.com.tw/_nuxt/img/image_local_4_bg.c6ba67c.jpg');
       width: 100%;
-      height: 156px;
+      height: 155px;
       /* background-attachment: fixed; */
-      background-position: center; 
+      background-position: center center; 
       background-repeat: no-repeat;
+      background-size: cover;
       /* background: olive; */
     }
+    /* .media-body ul li{
+      text-align: left;
+    } */
+    /* .media-body {
+      text-align: center;
+    } */
+
+    /* 課程圖片加入 */
 
 
     /* 
     -----------------------products 
     */
-    section.page-section{
-      padding: 75px 0;
-    }
     /* about product both */
     .container {
       position: relative;
@@ -388,19 +767,80 @@
         bottom: 0px;	
         left: 0;	
         right: 0;
-        height: 30%;
+        height:  15%;
+        padding: 6%;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         background-color: rgba(0,0,0,.5);
         color:#fff;
-        transition: height .5s cubic-bezier(.63,1.57,.82,1.35);
+        /* transition: height .5s cubic-bezier(.63,1.57,.82,1.35); */
         /* padding-left: 18px;	 */
         box-sizing: border-box;
     }
-    .box:hover .txt{
+    /* .box:hover .txt{
         width: 100%;
         height: 50%;	
+    } */
+    li.pdt-li{
+      color: #fff;
+    }
+    /* 關掉 */
+    .owl-nav{
+      display: none;
+    }
+    .owl-dots{
+      padding-top: 30px;
+    }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+      width: 100px;
+      height: 15px;
+    }
+    .owl-theme .owl-dots .owl-dot span{
+      width: 100px;
+      height: 15px;
+    }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+      background-color: #84b545;
+    }
+    /* 
+    rental
+    */
+
+    /* 第三個租借場地 */
+    .main-wrap{
+      padding: 0;
+    }
+    .main-wrap img{
+      width: 100%;
+      height: 100%;
+    }
+    span.leftF{
+      width: 20%;
+      float: left;
+    }
+    span.rightF{
+      width: 80%;
+    }
+    .branch{
+      float: right;
+    }
+    a.decoration{
+      text-decoration:none;
+      margin: 10px;
+    }
+    div.apply{
+      background-color: #85b342; 
+      color:#fff;
+      text-align: center;
+      width: 100%;
+      height: 50px; 
+      font-size: 35px;
+      text-decoration:none;
+      margin: 0 auto;
+    }
+    div.apply:hover{
+      color: #4a6b27;
     }
 
     /* 
@@ -432,25 +872,24 @@
       text-align:center;
       padding: 0px 0px;
       display: inline-block;
-      
     }
-    ul {
+    /* ul {
       padding: 0;
       margin:0;
-    }
-    li {
+    } */
+    /* li {
       list-style-type: none;
       margin: 0;
       text-align:center;
-      color:#b3b3b3;
-    }
+      color:#343434;
+    } */
     .slidebar i {
       text-align:center;
-      color:#b3b3b3;
+      color:#343434;
       font-size: 20px;
     }
     .slidebar ul a {
-      color:#b3b3b3;
+      color:#343434;
       display: inline-block;
       padding: 20px;
       border-radius:6px; 
@@ -474,6 +913,16 @@
     /* 
     -----------------------contact
     */
+
+    .use-flexbox{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        /* width:200px;
+        height:150px; */
+        /* border:1px solid #000; */
+    }
+
     .contact-all{
       height: 100vh;
       background-image: url("../imgs/alanchen/0U2A9444.jpg");
@@ -485,7 +934,6 @@
     .send-mailBag{
       width: 60%;
       background: #e9edf0;
-      /* padding: 10px; */
       border: 20px solid #d7d7d7;
     }
     .container-button{
@@ -494,10 +942,9 @@
     .contact-row{
       height: 100vh;
       position: relative;
-      /* top: 20%; */
     }
     .mail{
-      word-wrap: break-word;
+      word-wrap: break-word;/*摺行*/
     }
     .image-farm img{
       height: 400px; 
@@ -515,6 +962,7 @@
     }
     .container-contact {
       width: 100%;
+      padding-bottom: 20px;
     }
     .border-animation {
       --border-width: 0.1em;
@@ -534,8 +982,8 @@
       position: relative;
       display: inline-block;
       width: 100%;
-      font-family: 'Six Caps', sans-serif;
-      font-weight: 300;
+      /* font-family: 'Six Caps', sans-serif; */
+      /* font-weight: 300; */
       text-transform: uppercase;
       letter-spacing: 0.05em;
       cursor: pointer;
@@ -672,7 +1120,7 @@
     }
     @media (min-width: 1200px) {
       .border-animation {
-        font-size: 6em;
+        font-size: 4em;
         line-height: 1em;
       }
     }
@@ -680,16 +1128,22 @@
     /* 
     ------------------------footer
     */
+    h4{
+      font-size: 20px;
+    }
     .foot-all{
       background-color:#78ae32;
-      background-image:url('https://convertingcolors.com/plain-78AE32.svg');
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-      background-position:center;
-      color: #fff;
-      opacity: 8;
+      /* background-image:url('https://convertingcolors.com/plain-78AE32.svg'); */
+      background-image: url('http://kotorinoyu.jp/img/bg-foot.gif');
+      background-repeat:repeat;
+      /* background-attachment:fixed; */
+      background-position:center center;
+      /* color: #000; */
+      opacity: .9;
     }
-
+    .list-inline{
+      padding: 4px 0;
+    }
     /* 
     ------------------------scroll top 
     */
@@ -703,7 +1157,7 @@
         text-align: center;
         line-height: 30px;
         background: Transparent;
-        color: #b9b9b9;
+        color: #415922;
         cursor: pointer;
         border: none;
         border-radius: 2px;
@@ -718,16 +1172,31 @@
     #back-to-top.show {
       opacity: 1;
     } 
-
-
-
-    /* // Extra small devices (portrait phones, less than 576px) */
+    /* 
+    
+    // Extra small devices (portrait phones, less than 576px) 
+    
+    */
     @media (max-width: 575.98px) {
       /* 
       Global all
       */
       .collapse{
         float: none;
+      }
+      /* 
+      about 
+      */
+      .pdt-all{
+        padding-bottom: 10px;
+      }
+      .image-about{
+        width: 100%;
+      }
+      /* ＲＷＤ左右倆旁邊不要設定任何值 */
+      .section-padding{
+        padding-left: 0;
+        padding-right: 0;
       }
       /* 休閒農場介紹與新聞相關報導 */
       .center-vertical{
@@ -738,27 +1207,23 @@
       /* 
       products
       */
-      /* .slider-active .owl-dots{
-        position: relative;
-        top: -75px;
-      } */
-      /* .owl-nav button.owl-prev{
-        opacity: 0;
-      }
-      .owl-nav button.owl-next{
-        opacity: 0;
-      } */
     }
+    /* 
+    
+    // Small devices (landscape phones, less than 768px)
 
-    /* // Small devices (landscape phones, less than 768px) */
+    */
     @media (max-width: 767.98px) {
       /* 
       Global all
       */
+      .paddingTopFifteen{
+        padding-top: 15px;
+      }
       /* 
       navbar
-       */
-      .navbar-brand{
+      */
+       .navbar-brand{
         display: none;
       }
       .collapse{
@@ -775,72 +1240,116 @@
         border:none;
         outline: none;
         border-radius: 0px;
-        
+
       }
       /* Start Nav Styles */
       .navbar-dot {
         right: 20px;
       }
-      /* 
-      about 
-      */
+      .pdt-all{
+        padding-left: 10px;
+      } 
       .news-img{
         top: 0;
       }
-      /* 休閒農場介紹  */
-      .int-center-vertical{
-        float: none;
-        position: relative;
-        /* top: 50%; */
-        /* transform: translateY(0%); */
+      /* 
+      index 
+      */
+      .effect{
+        padding: 10px;
       }
-      /* 新聞報導 */
-      .news-center-vertical{
+      .effect img {
+        width: 100%;
+        height: 100%;
+      }
+      .effect img.top:hover {
+        bottom: -350px;
+        padding-top:500px; 
+      }
+      .effect img.alone:hover{
+        bottom: -390px;
+        padding-top:500px ;
+      }
+      /* 
+      about 
+      */
+      .image-about{
+        width: 100%;
+      }
+      /* 新聞報導 捨不得刪除掉讓我留下拜託 */
+      /* .news-center-vertical{
         float: none;
         position: relative;
         top: 50%;
         transform: translateY(0%);
-      }
+      } */
       /* news */
-        .preface-news {
+        /* .preface-news {
           padding-top: 0;
-      }
+      } */
       /* 課程 */
       .course-center-vertical{
         float: none;
-        position: relative;
-        top: 50%;
-        transform: translateY(0%);
+        /* position: relative; */
+        /* top: 50%; */
+        /* transform: translateY(0%); */
       }  
-      
+      .media img{
+        width: 100%;
+      }
       /* 
       products
       */
-    
+      .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        width: 10px;
+        height: 10px;
+      }
+      .owl-theme .owl-dots .owl-dot span{
+        width: 10px;
+        height: 10px;
+      }
+      .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        background-color: #85b342;
+      }
+      /* 
+      rental
+      */
+      span.leftF{
+        float: none;
+      }
+      .branch{
+        float: none;
+      }
       /* 
       contact
       */
-      /* .p_s{
-        padding-top: 100px;
-      } */
-      .image-farm img{
-        height: 150px; 
-        width:100%;
-        padding: 10px 0 0 0 ;
-      }
       .contact-row{
         height: 100vh;
-        /* top: 5%; */
-      }
-      .send-mailBag{
-        width: 100%;
       }
       .slidebar li{
         display: block;
       }
+      .send-mailBag{
+        width: 100%;
+        background: #e9edf0;
+        border: 10px solid #d7d7d7;
+      }
+      .border-animation__inner{
+        font-size: 35px;
+      }
+      /* 
+      Call to Action 緩衝區概念 
+      */
+      .call-to-action {
+        padding:30px;
+      }
     }
 
-    /*  Medium devices (tablets, less than 992px) */
+    /*  
+    
+    Medium devices (tablets, less than 992px) 
+
+    */
     @media (max-width: 991.98px) {
       /* 
       Global all
@@ -851,16 +1360,26 @@
       .news-img{
         top: 0;
       }
-      .section.page-section{
-        /* padding: 200px 0; */
+      /* 
+      about
+      */
+      .image-about{
+        width: 100%;
       }
-      /* about : product both */
-      .course-center-vertical{
-        transform: translateY(2%);
+      .effect{
+        padding: 10px;
       }
-      /* 休閒農場介紹  */
-      .int-center-vertical{
-        transform: translateY(8%);
+      .effect img {
+        width: 100%;
+        height: 100%;
+      }
+      .effect img.top:hover {
+        bottom: -350px;
+        padding-top:500px; 
+      }
+      .effect img.alone:hover{
+        bottom: -390px;
+        padding-top:500px ;
       }
       /* 
       contact
@@ -875,11 +1394,18 @@
       /* 
       Global all
       */
-      
-      /* course */
-      .course-center-vertical{
+
+      /* 
+      about
+       */
+
+      /* 
+      course
+      */
+      /* .course-center-vertical{
         transform: translateY(0%);
-      }
+      } */
+
     }
 
 
@@ -889,34 +1415,206 @@
 
 
 
-    /* products css navbar 效果 */
-    .slider-active .owl-nav button{
-      height: 30px;
-      width: 30px;
-    }
-    .slider-active .owl-nav button i{
-      font-size: 30px;
-    }
-    /*
-    .slider-active .owl-dots{
-      left: 0;
-      right: 0;
-      bottom: 15px;
-      text-align: center;
-    }
-    .slider-active .owl-dot{
-      margin: 0 2px;
-      display: inline-block;
-      border-radius: 50%;
-      background: red ;
-    }
-    .owl-nav button.owl-prev{
-      position: relative;
-      left: -50%;
-      top: -330px;
-    }
-    .owl-nav button.owl-next{
-      position: relative;
-      left: 50%;
-      top: -330px;
-    } */
+
+
+
+
+
+/* rental租借場地 */
+/* Start Home Styles */
+.padding-right{
+  padding-right: -30px;
+}
+/* End Home Styles */
+.lib-panel {
+    margin-bottom: 20Px;
+}
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+.lib-panel .lib-row.lib-header {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 0 7px 0;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
+}
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 第二個場地租借 */
+.intro {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.left {
+	float: left;
+	height: 100%;
+	width: 60%;
+	padding: 3rem 3rem 3rem 5rem;
+	display: table;
+}
+.left > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+/* span {
+  color: #E8CA2B;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-bottom: 4rem;
+} */
+/* h1 {
+	font-size: 8rem;
+	margin-bottom: 3rem;
+} */
+h1 + p {
+  color: #949494;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+p + a {
+  font-size: 1.6rem;
+  color: #000;
+}
+.slider {
+	float: right;
+	position: relative;
+	width: 40%;
+	height: 100%;
+}
+.slider li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	transition: clip .7s ease-in-out, z-index：0s .7s;
+	clip: rect(0, 100vw, 100vh, 100vw);
+	display: table;
+}
+.center-y {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+}
+h3 {
+	font-size: 5rem;
+	font-style: italic;
+}
+h3 + a {
+	font-size: 1.6rem;
+	display: inline-block;
+	color: #fff;
+	margin-top: 2rem;
+}
+h3, h3 + a {
+	opacity: 0;
+	transition: opacity .7s 0s, transform.5s .2s;
+	transform: translate3d(0, 50%, 0);
+}
+li.current h3, li.current h3 + a {
+	opacity: 1;
+	transition-delay: 1s;
+	transform: translate3d(0, 0, 0);
+}
+li.current {
+	z-index: 1;
+	clip: rect(0, 100vw, 100vh, 0);
+}
+li.prev {
+	clip: rect(0, 0, 100vh, 0);
+}
+.slider nav {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
+}
+nav a {
+	/* display: inline-block; */
+	/* border-radius: 50%; */
+	/* width: 1.2rem;
+	height: 1.2rem;
+  min-width: 12px;
+  min-height: 12px;
+	background: #fff;
+	margin: 0 1rem;
+  transition: transform .3s; */
+}
+a.current_dot {
+	transform: scale(1.4);
+}
+@media screen and (max-width: 700px) {
+	.left {
+		width: 100%;
+		height: 30%;
+	}
+	.slider {
+		width: 100%;
+		height: 70%;
+	}
+}
+
+
+
+
+
