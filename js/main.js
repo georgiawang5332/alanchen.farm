@@ -56,8 +56,6 @@ $(document).ready(function(){
   })
 });
 
-
-
 // scrolltop
 // $(document).ready(function () {
 
@@ -77,10 +75,6 @@ $(document).ready(function(){
 //   });
 
 // });
-
-
-
-
 
 // scroll to Top
 if ($('#back-to-top').length) {
@@ -108,14 +102,10 @@ if ($('#back-to-top').length) {
       }, 2000);
   });
 }
-  
-
-
 
 /*
   form （Registration Form）
 */
-
 $(document).ready(function(){
   $('div.wrapper').addClass('js');
   //先消失
@@ -146,3 +136,5 @@ $(document).ready(function(){
   });
 }); // ready
 
+// 外掛 wow.js
+new WOW().init();

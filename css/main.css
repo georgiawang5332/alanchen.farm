@@ -10,7 +10,7 @@
     list-style-type: none;
     text-decoration:none;
     text-transform: uppercase;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     /* 鎖右鍵無法複製 文字 */
     -webkit-user-select: none;/* Safari 3.1+ */
     -moz-user-select: none;/* Firefox 2+ */
@@ -484,10 +484,6 @@ h2.zero , p.zero {
   -----------------------about 
   */
 
-
-
-
-
   /* 關於農場品香介紹 */
   .wHundredPercent{
     width: 100% !important;
@@ -521,21 +517,22 @@ h2.zero , p.zero {
   }
   .flex {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around; */
-    justify-content: center;
+    /* justify-content: center; */
     /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around | stretch */
-    align-content: center;
+    /* align-content: center; */
+    align-items: center;
   }
   .item {
-    display: flex;
+    display: inline-flex;
     justify-content: left;
     align-items: center; 
-    /* font-size: 2rem;*/
+    /* font-size: 2rem; */
   }
   .flex-2 {
-    /* margin-top: 10px; */
-    width: 40%;
+    margin-top: 10px;
+    /* width: 40%; */
   }
   .ptten{
     margin-top: 20px;
@@ -565,9 +562,9 @@ h2.zero , p.zero {
   .call-p{
     font-size: 20px;  
   }
-  .text-primary{
+  /* .text-primary{
     font-size: 25px;
-  }
+  } */
   /* 阿蘭城休閒農場 */
   .image-about{
     width: 50%;
@@ -1223,7 +1220,7 @@ h2.zero , p.zero {
       /* 
       navbar
       */
-       .navbar-brand{
+      .navbar-brand{
         display: none;
       }
       .collapse{
@@ -1240,7 +1237,6 @@ h2.zero , p.zero {
         border:none;
         outline: none;
         border-radius: 0px;
-
       }
       /* Start Nav Styles */
       .navbar-dot {
@@ -1275,6 +1271,15 @@ h2.zero , p.zero {
       */
       .image-about{
         width: 100%;
+      }
+      .flex {
+        /* display: none; */
+        flex-wrap: wrap;
+        /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around; */
+        /* justify-content: center; */
+        /* // 修改以下值試試看 flex-start | flex-end | center | space-between | space-around | stretch */
+        /* align-content: center; */
+        align-items: center;
       }
       /* 新聞報導 捨不得刪除掉讓我留下拜託 */
       /* .news-center-vertical{
@@ -1360,6 +1365,10 @@ h2.zero , p.zero {
       .news-img{
         top: 0;
       }
+      /* .centerImg{
+        max-width: 300px;
+        height: 100%;
+      } */
       /* 
       about
       */
@@ -1398,20 +1407,16 @@ h2.zero , p.zero {
       /* 
       about
        */
-
+      /* .centerImg{
+        width: 200px;
+        height: 200px;
+      } */
       /* 
       course
       */
-      /* .course-center-vertical{
-        transform: translateY(0%);
-      } */
+      
 
     }
-
-
-
-
-
 
 
 
@@ -1478,15 +1483,6 @@ h2.zero , p.zero {
 .no-padding {
     padding: 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* 第二個場地租借 */
